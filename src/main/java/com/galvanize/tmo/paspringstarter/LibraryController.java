@@ -16,6 +16,14 @@ public class LibraryController {
 
     @GetMapping("/books")
     public List<Book> getBooks() {
+         Comparator<Book> bookComparator = new Comparator<Book>() {
+            public int compare(Book b1, Book b2) {
+                return b1.title.compareTo(b2.title);
+            }
+        };
+
+
+        Collections.sort(bookList,bookComparator);
         return bookList;
     }
 

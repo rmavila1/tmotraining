@@ -1,10 +1,19 @@
 package com.galvanize.tmo.paspringstarter;
 
 public class Book {
+
     int id;
     String author;
     String title;
     int yearPublished;
+
+    public Book(int id, String author, String title, int yearPublished) {
+        super();
+        this.id = id;
+        this.author = author;
+        this.title = title;
+        this.yearPublished = yearPublished;
+    }
 
     public int getId() {
         return id;
@@ -37,4 +46,5 @@ public class Book {
     public void setYearPublished(int yearPublished) {
         this.yearPublished = yearPublished;
     }
+
 }
